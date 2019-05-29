@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './components/index/index.component';
 import { MainComponent } from './components/main/main.component';
+import { GuardService } from './services/guard.service';
 
 const routes: Routes = [
   {
     path: '',
-    component: IndexComponent
+    component: IndexComponent,
+    canActivate:[GuardService]
   },
   {
     path: 'main',
