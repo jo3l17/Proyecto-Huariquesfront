@@ -26,5 +26,12 @@ export class ToolBarComponent implements OnInit {
       width: '400px',
     });
   }
+  loged(){
+    let loged = localStorage.getItem("login");
+    if(loged){
+      return false;
+    }
+    return true;
+  }
 
 }
