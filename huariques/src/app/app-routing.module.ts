@@ -2,11 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
+import { IndexComponent } from './components/index/index.component';
+import { MainComponent } from './components/main/main.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: AppComponent
+    component: IndexComponent
+  },
+  {
+    path: 'main',
+    component: MainComponent
   }
 ]
 @NgModule({
@@ -14,6 +20,6 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes)
   ],
-  exports:[RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
